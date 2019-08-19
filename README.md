@@ -46,3 +46,26 @@ mas recentemente a análise utilizando redes neurais recorrente tem ganhado for�
 <a name="denguecampinas">2</a>: https://g1.globo.com/sp/campinas-regiao/noticia/2019/06/03/campinas-confirma-4a-morte-por-dengue-e-numero-de-infectados-pelo-virus-aumenta-12percent.ghtml
 
 <a name="modelosautoregressivos">3</a>:https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model
+
+
+
+# Links Uteis:
+https://www.arca.fiocruz.br/bitstream/icict/26315/2/oswaldoG_cruz_etal_IOC_2018.pdf
+Predição mensal dos casos de dengue no brasil utilizando modelo ARIMA. Não utiliza nenhum outro tipo de dado.
+
+https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-9-395
+Predição mensal dos casos de dengue na China utilizando relação com dados meteorológicos
+Parece meio fraco, mas pelo menos da pra usar us métodos de inspiração.
+
+https://www.researchgate.net/publication/51205747_Time_series_analysis_of_dengue_incidence_in_Guadeloupe_French_West_Indies_Forecasting_models_using_climate_variables_as_predictors
+Dados semanais de dengue, Modelo SARIMA para correlação com dados meteorológicos
+
+https://www.semanticscholar.org/paper/Time-series-analysis-of-dengue-incidence-in-Rio-de-Luz-Mendes/040f77869aee49744e557e25cc69239bac606514
+Dados mensais de dengue, Modelo ARIMA para regressão em séries temporais sem outros dados.
+
+https://apps.who.int/iris/handle/10665/170465
+Dados mensais de dengue, Modelo SARIMA, regressão sem outros dados.
+
+
+
+
