@@ -35,8 +35,8 @@ O problema proposto utiliza a métrica de erro absoluto médio (norma $l_1$)
 
 Tradicionalmente a análise de séries temporais utiliza modelos 
 auto-regressivos da família ARMA (Autoregressive–moving-average)<sup>[3](#modelosautoregressivos)</sup>,
-a partir de uma pesquisa preliminar (ver [apendice](#apendice)) de estudos
-de predição de casos de dengue e malária, temos que o modelo mais comum são
+a partir de uma [pesquisa preliminar](#revisão-literária) de estudos
+preditivos em séries temporais de dengue e malária, temos que os modelos mais comuns são
 os modelos (S)ARIMA com método de otimização Box-Jenkins<sup>[4](#boxjenkins)</sup>.
 Porém, estes modelos dependem de suposições fortes de estacionariedade 
 dos dados e os exemplos encontrados lidam com um espaço
@@ -44,6 +44,23 @@ de atributos muito menor (até 4) do que o nosso (21 atributos).
 
 Também é do interesse do grupo a exploração de modelos baseados em redes neurais,
 mas devido ao grande número de opções ainda não temos candidatos específicos.
+
+
+# Revisão Literária
+
+|  Doença |    Anos   | Resolução Temporal |                              Outros Atributos                             |             Cidades            | Modelo                            | Algoritimo                               | Obs                                                                                                  | Trabalho                                                                            | Ano (Citações) |
+|:-------:|:---------:|:------------------:|:-------------------------------------------------------------------------:|:------------------------------:|-----------------------------------|------------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------|
+|  Dengue | 2001-2014 | Mensal             |                                    Não                                    |     Recife/Goiania, Brasil     | ARIMA                             | Box Jenkins                              |                                                                                                      | [link](https://www.arca.fiocruz.br/bitstream/icict/26315/2/oswaldoG_cruz_etal_IOC_2018.pdf) | 2018 (9)       |
+|  Dengue | 2001-2006 | Mensal             |        Temperatura Max/Min, Precipitação, humidade relativa, vento        |        Guangzhou, China        | Regressão de Poisson Multivariada | GEE/QICu                                 | Temperatura minima/ Humidade são positivamente correlacionadas, vento é negativamente correlacionado | [link](https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-9-395)          | 2009 (181)     |
+|  Dengue | 2000-2006 | Semanal            |         Temperatura Max/Min/Avg, Precipitação, Humidade Relativa          | Guadeloupe, French West Indies | SARIMA                            | Box Jenkins                              | Variavel com lag de 3 meses e Temperatura são os atributos mais preditivo.                           | [link](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-11-166)            | 2011 (170)     |
+| Dengue  | 1997-2004 | Mensal             | Temperatura Max/Min, Precipitação diaria e anual                          | Rio de Janeiro, Brasil         | ARIMA                             | Box Jenkins                              | Trabalha com escala logaritimica dos dados                                                           | [link](https://www.ajtmh.org/content/journals/10.4269/ajtmh.2008.79.933)                    | 2008 (160)     |
+| Dengue  | 2000-2007 | Mensal             | Não                                                                       | Dhaka, Bangladesh              | SARIMA                            | Normalized Bayesian Information Criteria |                                                                                                      | [link](https://apps.who.int/iris/handle/10665/170465)                                       | 2008 (45)      |
+| Malaria | 2001-2008 | Mensal             | Temperatura do chão, Precipitação, Indice de Vegetação, EvapoTranspiração | Ethiopia (Várias localidades)  | SARIMA                            | Não Especificado                         | Trabalha com escala logaritimica dos dados.                                                          | [link](https://malariajournal.biomedcentral.com/articles/10.1186/1475-2875-9-251)           | 2012 (85)      |
+| Malaria | 2005-2015 | Mensal             | Temperatura, Precipitação, Humidade Relativa, Indice de Vegetação         | Afeganistão                    | ARIMA                             | Box Jenkins                              | Trabalha com escala logaritimica dos dados.                                                          | [link](https://malariajournal.biomedcentral.com/articles/10.1186/s12936-016-1602-1)         | 2016 (16)      |
+| Malaria | 1994-2006 | Mensal             | Temperatura Max/Min/Avg, Precipitação, Humidade Relativa                  | Butão                          | ARIMAX                            | Não Especificado                         | Variáveis não eram transferiveis para diferentes localizações                                        | [link](https://malariajournal.biomedcentral.com/articles/10.1186/1475-2875-9-251)           | 2010 (106)     |
+
+
+# Referências
 
 <a name="drivendata">1</a>: Bull, Peter, Isaac Slavitt, and Greg Lipstein.
 "Harnessing the power of the crowd to increase capacity for data science in the social sector."
@@ -54,23 +71,3 @@ mas devido ao grande número de opções ainda não temos candidatos específico
 <a name="modelosautoregressivos">3</a>:https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model
 
 <a name="boxjenkins">4</a>:https://en.wikipedia.org/wiki/Box%E2%80%93Jenkins_method
-
-# Apêndice
-https://www.arca.fiocruz.br/bitstream/icict/26315/2/oswaldoG_cruz_etal_IOC_2018.pdf
-Predição mensal dos casos de dengue no Brasil, Modelo ARIMA. Não utiliza nenhum outro tipo de dado.
-
-https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-9-395
-Predição mensal dos casos de dengue na China utilizando relação com dados meteorológicos
-Parece meio fraco, mas pelo menos dá pra usar uns métodos de inspiração.
-
-https://www.researchgate.net/publication/51205747_Time_series_analysis_of_dengue_incidence_in_Guadeloupe_French_West_Indies_Forecasting_models_using_climate_variables_as_predictors
-Dados semanais de dengue, Modelo SARIMA para correlação com dados meteorológicos.
-
-https://www.semanticscholar.org/paper/Time-series-analysis-of-dengue-incidence-in-Rio-de-Luz-Mendes/040f77869aee49744e557e25cc69239bac606514
-Dados mensais de dengue, Modelo ARIMA para regressão em séries temporais. Não utiliza nenhum outro tipo de dado.
-
-https://apps.who.int/iris/handle/10665/170465
-Dados mensais de dengue em Bangladesh, Modelo SARIMA. Não utiliza nenhum outro tipo de dado.
-
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5307250/
-Predição de casos de Malária em Gana com uso de dados de precipitação e temperatura para análise de séries temporais.
