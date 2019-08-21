@@ -27,7 +27,7 @@ e de vegetação, agregando 4 fontes distintas.
 
 San Juan, Puerto Rico      |  Iquitos, Peru
 :-------------------------:|:-------------------------:
-![](san_juan.png)          |  ![](iquitos.png)
+![](./images/san_juan.png) |  ![](./images/iquitos.png)
 
 
 ## Modelo
