@@ -5,7 +5,7 @@ ministrada no 2o Semestre de 2019 pelos professores
 José Cândido Silveira Santos Filho e Flavio du Pin Calmon, 
 escolhemos um desafio público de predição do número de casos de dengue
 baseado na série histórica das cidades de San Juan, Porto Rico e Iquitos, Peru.
-O desafio é oferecido pela plataforma DrivenData <sup>[1](#drivendata)</sup> 
+O desafio é oferecido pela plataforma [DrivenData](https://arxiv.org/abs/1606.07781)
 e a descrição completa do desafio está disponivel no 
 seu [site oficial](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/)
 
@@ -16,8 +16,8 @@ a escolha deste desafio está de acordo
 com a filosofia da disciplina, pois provê aos alunos 
 uma ótima oportunidade de aplicar ferramentas de inferência
 em um problema real e de relação direta às suas vidas cotidianas,
-visto que de janeiro a junho de 2019 já foram confirmados mais de 18,000 casos
-de dengue na cidade de Campinas<sup>[2](#denguecampinas)</sup>
+visto que de janeiro a junho de 2019 já foram confirmados
+[mais de 18,000 casos de dengue na cidade de Campinas](https://g1.globo.com/sp/campinas-regiao/noticia/2019/06/03/campinas-confirma-4a-morte-por-dengue-e-numero-de-infectados-pelo-virus-aumenta-12percent.ghtml)
 
 
 ## Dados 
@@ -34,10 +34,10 @@ San Juan, Puerto Rico      |  Iquitos, Peru
 O problema proposto utiliza a métrica de erro absoluto médio (norma $l_1$)
 
 Tradicionalmente a análise de séries temporais utiliza modelos 
-auto-regressivos da família ARMA (Autoregressive–moving-average)<sup>[3](#modelosautoregressivos)</sup>,
+auto-regressivos da família [ARMA (Autoregressive–moving-average)](https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model),
 a partir de uma [pesquisa preliminar](#revisão-literária) de estudos
 preditivos em séries temporais de dengue e malária, temos que os modelos mais comuns são
-os modelos (S)ARIMA com método de otimização Box-Jenkins<sup>[4](#boxjenkins)</sup>.
+os modelos (S)ARIMA com método de otimização [Box-Jenkins](https://en.wikipedia.org/wiki/Box%E2%80%93Jenkins_method).
 Porém, estes modelos dependem de suposições fortes de estacionariedade 
 dos dados e os exemplos encontrados lidam com um espaço
 de atributos muito menor (até 4) do que o nosso (21 atributos).
@@ -58,16 +58,3 @@ mas devido ao grande número de opções ainda não temos candidatos específico
 | Malaria | 2001-2008 | Mensal             | Temperatura do chão, Precipitação, Indice de Vegetação, EvapoTranspiração | Ethiopia (Várias localidades)  | SARIMA                            | Não Especificado                         | Trabalha com escala logaritimica dos dados.                                                          | [link](https://malariajournal.biomedcentral.com/articles/10.1186/1475-2875-9-251)           | 2012 (85)      |
 | Malaria | 2005-2015 | Mensal             | Temperatura, Precipitação, Humidade Relativa, Indice de Vegetação         | Afeganistão                    | ARIMA                             | Box Jenkins                              | Trabalha com escala logaritimica dos dados.                                                          | [link](https://malariajournal.biomedcentral.com/articles/10.1186/s12936-016-1602-1)         | 2016 (16)      |
 | Malaria | 1994-2006 | Mensal             | Temperatura Max/Min/Avg, Precipitação, Humidade Relativa                  | Butão                          | ARIMAX                            | Não Especificado                         | Variáveis não eram transferiveis para diferentes localizações                                        | [link](https://malariajournal.biomedcentral.com/articles/10.1186/1475-2875-9-251)           | 2010 (106)     |
-
-
-# Referências
-
-<a name="drivendata">1</a>: Bull, Peter, Isaac Slavitt, and Greg Lipstein.
-"Harnessing the power of the crowd to increase capacity for data science in the social sector."
- arXiv preprint arXiv:1606.07781 (2016).
-
-<a name="denguecampinas">2</a>: https://g1.globo.com/sp/campinas-regiao/noticia/2019/06/03/campinas-confirma-4a-morte-por-dengue-e-numero-de-infectados-pelo-virus-aumenta-12percent.ghtml
-
-<a name="modelosautoregressivos">3</a>:https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model
-
-<a name="boxjenkins">4</a>:https://en.wikipedia.org/wiki/Box%E2%80%93Jenkins_method
