@@ -25,5 +25,6 @@ http://www.dca.fee.unicamp.br/~lboccato/EFC1_IA006_1s2019.pdf
 ## How-To
 ```bash
 docker build -t dengai .
+docker run --rm -it --name dengai -v $PWD:/tf dengai
 ```
 
