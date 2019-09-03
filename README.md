@@ -21,6 +21,7 @@ https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python
 https://arxiv.org/pdf/1709.01907.pdf
 https://github.com/philipperemy/keras-tcn
 http://www.dca.fee.unicamp.br/~lboccato/EFC1_IA006_1s2019.pdf
+https://www.kaggle.com/sumi25/understand-arima-and-tune-p-d-q
 
 ## How-To
 ```bash

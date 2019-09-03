@@ -29,10 +29,13 @@ na próxima etapa do projeto.
 
 - Conclusoes
 
-
 ## Modelo
 
 ### Descrição teórica do modelo
+
+- ARMA
+- ARIMA
+- SARIMA
 
 ## Experimentos
 
@@ -41,10 +44,33 @@ na próxima etapa do projeto.
     - log vs nao log
 - Agregação
 
+
+### Consideracoes praticas
+
+- Qual biblioteca foi utilizada
+- Onde está o código fonte
+- Box Jenkins não está disponivel no statsmodels, segundo a documentação da biblioteca
+o metodo utilizado é LBFGS minimizando MLE por filtro de Kalman (whatever that means)
+- Testes com outros metodos de otimização e parametros da biblioteca foram utilizados sem
+sucesso.
+
+
+
 ### Resultados
 - Regressão linear sem dados temporais
+- Regressão linear temporal/ sem outros dados
 - SARIMA
 - SARIMAX
+    - Todos os Dados
+    - Feature Engineering
+    
+- Sasonalidade de um ano é clara, mas existe uma
+ sasonalidade de 3 anos que não é levada em conta ( Ver residual 3)
+ Dynamic harmonic regression? (https://otexts.com/fpp2/complexseasonality.html)
+
+
+#### Resultados nos testes
+Fazer uma submissão ao challenge e reportar os resultados
 
 ## Nota de Transparencia
 
