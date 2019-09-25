@@ -26,6 +26,6 @@ https://www.kaggle.com/sumi25/understand-arima-and-tune-p-d-q
 ## How-To
 ```bash
 docker build -t dengai .
-docker run --rm -it --name dengai -v $PWD:/tf dengai
+docker run --rm -it -p 8888:8888 --name dengai -v $PWD:/tf dengai
 ```
 
