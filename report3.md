@@ -33,6 +33,11 @@ com o uso apenas da série temporal é muito dificil fazer essa predição.
 Citar trabalho de mestrado com nosso dataset que só leva em conta "12-weeks ahead"
 enquanto a submissão ao challenge é de vários anos (130 semanas? conferir)
 
+- Esse acesso parcial a dados historicos é uma qualidade específica desse challenge
+e não é realista, portanto não é comum na literatura mas justamente por isso não é 
+comum na literatura.
+
+
 ### Software
 - Falar sobre padronização de software para teste de diferentes técnicas
 
