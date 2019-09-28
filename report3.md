@@ -15,6 +15,9 @@ Os objetivos desta fase são:
 
 
 
+# Paper vs Report
+Compilar resultados principais de antes nesse trabalho?
+
 
 ## Outline
 
@@ -31,14 +34,18 @@ Os objetivos desta fase são:
 - Descrever que o challenge é um problema de long-term forecasting,
 com o uso apenas da série temporal é muito dificil fazer essa predição.
 Citar trabalho de mestrado com nosso dataset que só leva em conta "12-weeks ahead"
-enquanto a submissão ao challenge é de vários anos (130 semanas? conferir)
+enquanto a submissão ao challenge é de vários anos (175 semanas? conferir)
 
 - Esse acesso parcial a dados historicos é uma qualidade específica desse challenge
 e não é realista, portanto não é comum na literatura mas justamente por isso não é 
 comum na literatura.
 
+# Técnicas
+
+- Figura da abordagem janelada.
 
 ### Software
 - Falar sobre padronização de software para teste de diferentes técnicas
+- Colocar no README e apontar para o README
 
 ### Resultados???
