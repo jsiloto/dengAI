@@ -1,51 +1,53 @@
 # Report 3 Outline
 
-## Objetivos
-Os objetivos desta fase são:
-- Alguns pontos adicionais de análise dos dados
--
-- Estabelecer um processo padronizado de predição por software:
-    - Fazer split de teste validação usando os dados 
-    - colocar graficos de cada uma das prediçoes
-    - Fazer submissões ao challenge
- 
-- Fazer uma submissão decente ao challenge
-- Descrever desafios
-- Organizar código
+## Introduction
 
+Describe our objectives:
+- Further analysis and understanding of the problem
+- Consolidate software approach with a standard procedure for any model (see repo)
+- Make one good submission
+- Syntethize previous work
 
+## The Data
+- Data from 2 cities and meteorological data
+- Statistics from 2 cities are very different
+- Correlation analysis
+    - Autocorrelation
+    - Cross Correlation(Tables) and Spearman correlation
+    - Delayed Correlation and Thresold correlation
+        (pick a value threshold and divide 2 groups: peak and no peak)
+    - Try Delayed Correlation divided by feature autocorrelation
 
-# Paper vs Report
-Compilar resultados principais de antes nesse trabalho?
+## The Problem
+- Time Series Forecasting, Talk about basics
+- Describe autoregression as basis for all forecasting
+- Describe the challenge format
+- Differentiate from traditional forecasting. Although the concept of
+exogenous variables exist, it is not expected to have sensor data of the future
+- Describing forecasting loop
+- Long term Forecasting is very difficult (cite other works) (Cite master
+    thesis with 12 weeks forecasting vs our problem: 180 weeks forecasting),
+    talk about positive feedback loop and the need to use the features.
+- Peaks are particularly difficult to forecast, is there a trigger?
+- Augument data with peak classification?
+- Describe our approaches:
+Feature Regression vs Feature Autoregression
 
+Picture of window matrix
 
-## Outline
+## The model
+- First attempts with temporal autoregression had no success, 
+but made clear that the autoregression window size and train/validation split
+sizes can influence heavily the results. Good models should be invariant to those.
+- Attempts with causal convolution networks \cite{wavenet} were made, but although
+it could halucinate "realistic looking peaks" it didn't match the validation data.
+- For its generality in usage we used MLP networks.
+# MLP
+# RNN
 
-### Introdução
-- Descrever Motivaçoes nessa fase (ver acima)
+## Results
 
-### Analise de dados
-- Falar sobre analise na primeira fase, extender trabalho
-    - spearman correlation
-    - correlação nos picos
-    - correlação com atraso com as variáveis
+- Choose a window based on data analysis (See delayed correlation)
+- Mention the and repo and standard way to implement more models (maybe?)
 
-### Challenge
-- Descrever que o challenge é um problema de long-term forecasting,
-com o uso apenas da série temporal é muito dificil fazer essa predição.
-Citar trabalho de mestrado com nosso dataset que só leva em conta "12-weeks ahead"
-enquanto a submissão ao challenge é de vários anos (175 semanas? conferir)
-
-- Esse acesso parcial a dados historicos é uma qualidade específica desse challenge
-e não é realista, portanto não é comum na literatura mas justamente por isso não é 
-comum na literatura.
-
-# Técnicas
-
-- Figura da abordagem janelada.
-
-### Software
-- Falar sobre padronização de software para teste de diferentes técnicas
-- Colocar no README e apontar para o README
-
-### Resultados???
+## Discussion and Conclusion

@@ -13,6 +13,8 @@ Luiz Eduardo Pita Mercês Almeida
 
 [Relatorio 2](report2.pdf)
 
+[Relatorio 3](report3.md)
+
 ## Links Uteis
 https://github.com/miguelTorresPorta/TimeSeries/blob/master/timeSeries.ipynb
 https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/
