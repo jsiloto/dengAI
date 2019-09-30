@@ -10,11 +10,8 @@ RUN pip install \
     sklearn \
     scipy \
     pandas \
-    statsmodels
-
-RUN pip install \
+    statsmodels \
     sklearn \
     pandas \
     statsmodels \
-    seaborn \
-    keras-tcn
+    seaborn
