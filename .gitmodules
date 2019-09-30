@@ -1,0 +1,6 @@
+[submodule "analysis/keras-tcn"]
+	path = analysis/keras-tcn
+	url = git@github.com:jsiloto/keras-tcn.git
+[submodule "analysis/CLR"]
+	path = analysis/CLR
+	url = git@github.com:jsiloto/CLR.git
