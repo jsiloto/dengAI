@@ -2,7 +2,8 @@ FROM tensorflow/tensorflow:1.14.0-gpu-py3-jupyter
 
 RUN apt-get update && apt-get install -y \
     wget \
-    aria2
+    aria2 \
+    git
 
 RUN pip install \
     numpy \
@@ -10,11 +11,11 @@ RUN pip install \
     sklearn \
     scipy \
     pandas \
-    statsmodels
-
-RUN pip install \
+    statsmodels \
     sklearn \
     pandas \
     statsmodels \
     seaborn \
     keras-tcn
+
+RUN pip install git+https://github.com/drivendataorg/drivendata-submission-validator.git
