@@ -206,6 +206,7 @@ class Experiment(object):
         result = self.forecast(model, copy(x_train[-1]), x_test)
         
         if self.normalize:
+            y_train = self.y_scaler.inverse_transform(y_train.reshape(1, -1)).reshape(-1)
             result = self.y_scaler.inverse_transform(result.reshape(1, -1)).reshape(-1)
         
         if self.plot:
