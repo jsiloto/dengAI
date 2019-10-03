@@ -13,7 +13,7 @@ The project team is composed by:
 ## Reports
 - [Report 1](report1.pdf)
 - [Report 2](report2.pdf)
-- Report 3 in progress
+- [Report 3](report3.pdf)
 
 ## How-To
 ```bash

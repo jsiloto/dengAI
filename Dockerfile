@@ -16,6 +16,7 @@ RUN pip install \
     pandas \
     statsmodels \
     seaborn \
-    keras-tcn
+    keras-tcn \
+    keras-rectified-adam
 
 RUN pip install git+https://github.com/drivendataorg/drivendata-submission-validator.git
